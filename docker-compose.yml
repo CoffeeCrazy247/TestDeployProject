@@ -6,6 +6,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    ports:
+      - "3005:3005"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     networks:
