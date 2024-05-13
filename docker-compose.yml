@@ -6,9 +6,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    ports:
-      - "3005:80"
-      - "3006:443"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - DOTNET_WATCH=1
