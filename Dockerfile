@@ -11,5 +11,5 @@ RUN dotnet publish -c Release -o out
 # Build runtime image
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /TestDeployProject
-COPY --from=build-env /App/out .
-ENTRYPOINT ["dotnet", "DotNet.Docker.dll"]
+COPY --from=build-env /TestDeployProject/out .
+ENTRYPOINT ["./TestDeployBlazor"]
