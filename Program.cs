@@ -2,7 +2,7 @@ using TestDeployBlazor.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.WebHost.UseUrls("https://*:3007;http://*:3006");
+builder.WebHost.UseUrls("http://*:3006");
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
